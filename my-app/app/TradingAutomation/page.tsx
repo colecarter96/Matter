@@ -6,8 +6,8 @@ const TradingAutomationPage = () => {
     return(
         <div>
             <Header />
-                <div className="flex justify-center pt-40 pb-20">
-                    <div className="w-2/3 text-left">
+                <div className="flex justify-center pt-28 md:pt-40 pb-20">
+                    <div className="w-11/12 md:w-9/12 sm:9/12 text-left">
                         <h1 className="font-bold text-xl">Government Trading Automation</h1>
                         <h2 className="font-bold text-lg">Feb 2024</h2>
                         <p className="p-4">Around last year Liam and I learned that there was a law that required people in the United State government
@@ -28,7 +28,7 @@ const TradingAutomationPage = () => {
                                 alt="Politicians Trades"
                                 width={500}  // Original width (can stay fixed)
                                 height={250} // Original aspect ratio (height)
-                                className="w-2/3 h-auto" // Image will take up 2/3 of the parent container width, keeping aspect ratio
+                                className="w-11/12 md:w-2/3 h-auto" // Image will take up 2/3 of the parent container width, keeping aspect ratio
                             />
                         </div>
                         
@@ -46,7 +46,7 @@ const TradingAutomationPage = () => {
                                 alt="Politicians Trades"
                                 width={500}  // Original width (can stay fixed)
                                 height={250} // Original aspect ratio (height)
-                                className="w-2/3 h-auto" // Image will take up 2/3 of the parent container width, keeping aspect ratio
+                                className="w-11/12 md:w-2/3 h-auto" // Image will take up 2/3 of the parent container width, keeping aspect ratio
                             />
                         </div>
 
@@ -83,7 +83,7 @@ const TradingAutomationPage = () => {
                                 alt="Politicians Trades"
                                 width={500}  // Original width (can stay fixed)
                                 height={250} // Original aspect ratio (height)
-                                className="w-2/3 h-auto" // Image will take up 2/3 of the parent container width, keeping aspect ratio
+                                className="w-11/12 md:w-2/3 h-auto" // Image will take up 2/3 of the parent container width, keeping aspect ratio
                             />
                         </div>
 
