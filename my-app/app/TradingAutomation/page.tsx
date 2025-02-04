@@ -35,9 +35,9 @@ const TradingAutomationPage = () => {
 
                         <p className="p-4">
                             We began to come up with a plan. I was able to create and use a web scraper to gather all of our data on what trades they were making. 
-                            I was also able to place the trades through Alpaca's API. We were all setup. Except we would have to run this once a day
-                            in the morning on one of our laptops. At first that wasn't a problem. But if you missed a day that would cause you to be behind
-                            on trades that were already pretty delayed (due to the fact that government officials don't have to instantly report trades).
+                            I was also able to place the trades through Alpaca&apos;s API. We were all setup. Except we would have to run this once a day
+                            in the morning on one of our laptops. At first that wasn&apos;t a problem. But if you missed a day that would cause you to be behind
+                            on trades that were already pretty delayed (due to the fact that government officials don&apos;t have to instantly report trades).
                         </p>
 
                         <div className="flex justify-center py-4">
@@ -88,7 +88,7 @@ const TradingAutomationPage = () => {
                         </div>
 
                         <p className="p-4">
-                            This was a good project to learn and get more familiar with making a web scraper. It also was cool to see that it wasn't
+                            This was a good project to learn and get more familiar with making a web scraper. It also was cool to see that it wasn&apos;t
                             too hard to create an automation and run it on a cloud computing platform like AWS. We were overall not motivated by the numbers
                             that we saw, and there was a sudden boom in mobile applications for copy trading with government officials, so we decided not 
                             to move forward with this project.
