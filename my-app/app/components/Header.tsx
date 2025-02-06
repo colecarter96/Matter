@@ -4,7 +4,7 @@ const Header = () => {
 
     return(
         <div>
-            <div className=" bg-black">
+            <div className="bg-black">
                 asdf
             </div>
             <header className="flex justify-center items-center pt-4 pb-4 px-6 text-white bg-black lg:bg-white lg:text-black">
