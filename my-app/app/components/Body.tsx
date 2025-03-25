@@ -23,7 +23,7 @@ const Body = () => {
                         title="Pants Index"
                         date="Sept 2024"
                         description="An improved online pants marketplace focused on measurements first. Sort pants by a range of measurements."
-                        link="https://pants-index4.vercel.app"
+                        link="https://pants-index.vercel.app"
                     />
                 </div>
             </div>
