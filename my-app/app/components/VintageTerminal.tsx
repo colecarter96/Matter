@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useMemo } from 'react'
 import { useRouter } from 'next/navigation'
 
 export default function VintageTerminal() {
@@ -13,14 +13,14 @@ export default function VintageTerminal() {
   const inputRef = useRef<HTMLInputElement>(null)
   const router = useRouter()
 
-  const terminalLines = [
+  const terminalLines = useMemo(() => [
     '> Welcome to MATTER Terminal v0.5',
     '> Initializing system...',
     '> Loading projects database...',
     '> Projects successfully loaded',
     '> Type "PROJ" for projects command',
     '> Type "CTC" for contact command'
-  ]
+  ], [])
 
   useEffect(() => {
     if (!isTypingComplete) {

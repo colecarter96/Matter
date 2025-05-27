@@ -1,5 +1,3 @@
-import SettingsBar from './SettingsBar'
-
 interface VintageWindowProps {
   children: React.ReactNode
 }
