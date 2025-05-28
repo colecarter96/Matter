@@ -91,7 +91,7 @@ export default function VintageTerminal() {
 
   return (
     <div 
-      className="w-full bg-[#2d2d2d] border-white font-mono text-[#ededed] shadow-2xl cursor-text h-64"
+      className="w-full bg-[#2e2e2e] border-white font-roboto text-[#ededed] cursor-text h-64"
       onClick={handleClick}
     >
       {/* Terminal Header */}

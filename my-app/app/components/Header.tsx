@@ -12,7 +12,10 @@ export default function Header() {
     >
       <div className="flex items-center justify-between">
         <h1 className="font-rubik text-2xl">
+          <Link href='/'
+          >
           MATTER
+          </Link>
         </h1>
         <nav className="flex items-center space-x-8">
           <Link 

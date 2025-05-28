@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono, Rubik, Chivo, Pathway_Gothic_One } from "next/font/google";
+import { Geist, Geist_Mono, Rubik, Chivo, Pathway_Gothic_One, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import VintageWindow from "./components/VintageWindow";
@@ -39,6 +39,13 @@ const pathwayGothic = Pathway_Gothic_One({
   display: 'swap',
 });
 
+const robotoMono = Roboto_Mono({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-roboto-mono",
+  display: "swap"
+})
+
 export const metadata: Metadata = {
   title: "Matter.",
   description: "A place for things.",
@@ -57,7 +64,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${rubik.variable} ${chivo.variable} ${pathwayGothic.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${rubik.variable} ${chivo.variable} ${pathwayGothic.variable} ${robotoMono.variable} antialiased`}
         suppressHydrationWarning
       >
         <VintageWindow>
