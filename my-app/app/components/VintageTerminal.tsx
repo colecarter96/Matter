@@ -91,7 +91,7 @@ export default function VintageTerminal() {
 
   return (
     <div 
-      className="w-full bg-black border-2 border-white rounded-lg font-mono text-white shadow-2xl cursor-text h-64"
+      className="w-full bg-[#2d2d2d] border-white font-mono text-[#ededed] shadow-2xl cursor-text h-64"
       onClick={handleClick}
     >
       {/* Terminal Header */}
@@ -116,7 +116,7 @@ export default function VintageTerminal() {
         {!isTypingComplete && currentLine < terminalLines.length && (
           <div className="text-sm break-words">
             {displayText}
-            {showCursor && <span className="bg-white text-black">█</span>}
+            {showCursor && <span className="bg-white text-[#2d2d2d]">█</span>}
           </div>
         )}
 
@@ -130,7 +130,7 @@ export default function VintageTerminal() {
         {/* Input Line */}
         {isTypingComplete && (
           <div className="text-sm break-words flex">
-            <span>{'> '}</span>
+            <span>{'>  '}</span>
             <input
               ref={inputRef}
               type="text"
@@ -140,7 +140,7 @@ export default function VintageTerminal() {
               className="bg-transparent border-none outline-none text-white flex-1 font-mono text-sm"
               style={{ caretColor: 'transparent' }}
             />
-            {showCursor && <span className="bg-white text-black">█</span>}
+            {showCursor && <span className="bg-white text-[#2d2d2d]">█</span>}
           </div>
         )}
       </div>

@@ -3,6 +3,8 @@ import { Geist, Geist_Mono, Rubik, Chivo, Pathway_Gothic_One } from "next/font/g
 import "./globals.css";
 import Header from "./components/Header";
 import VintageWindow from "./components/VintageWindow";
+import ClientOnly from "./components/ClientOnly";
+import SettingsBar from "./components/SettingsBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -61,6 +63,18 @@ export default function RootLayout({
         <VintageWindow>
           <Header/>
           {children}
+          <ClientOnly fallback={
+          <div className="sticky bottom-0 z-10 w-full py-3 px-8 border-t border-gray-200" style={{
+            backgroundColor: 'var(--background)',
+            color: 'var(--foreground)'
+          }}>
+            <div className="flex items-center justify-center">
+              <span className="font-pathway text-sm">Loading controls...</span>
+            </div>
+          </div>
+        }>
+          <SettingsBar />
+        </ClientOnly>
         </VintageWindow>
       </body>
     </html>
