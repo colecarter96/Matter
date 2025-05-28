@@ -88,10 +88,6 @@ export default function SettingsBar() {
       style={{
         backgroundColor: 'var(--background)',
         color: 'var(--foreground)',
-        boxShadow: `
-          inset 3px 3px 6px rgba(0, 0, 0, 0.1),
-          inset -1px -1px 3px rgba(255, 255, 255, 0.8)
-        `,
         transition: 'background-color 0.3s ease, color 0.3s ease'
       }}
     >
