@@ -12,6 +12,11 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        rubik: ["var(--font-rubik)"],
+        chivo: ["var(--font-chivo)"],
+        pathway: ["var(--font-pathway-gothic)"],
+      },
     },
   },
   plugins: [],
