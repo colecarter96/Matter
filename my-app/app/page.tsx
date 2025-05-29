@@ -14,7 +14,7 @@ export default function Home() {
     {/* Terminal with fixed height */}
     <div className="pt-[28vh]">
       <ClientOnly fallback={
-        <div className="w-full h-full bg-[#2d2d2d] border-2 border-white rounded-lg font-mono text-white shadow-2xl flex items-center justify-center">
+        <div className="w-full h-full bg-[#2d2d2d] border-2 border-white rounded-lg font-mono text-white flex items-center justify-center">
           <span className="text-sm">Loading terminal...</span>
         </div>
       }>
