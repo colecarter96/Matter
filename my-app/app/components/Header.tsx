@@ -1,10 +1,47 @@
 'use client'
 
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import Image from 'next/image'
 
 export default function Header() {
   const [copied, setCopied] = useState(false)
+  const [isDark, setIsDark] = useState(false)
+
+  // Debug: Log the current state on every render
+  console.log('Header render - isDark:', isDark, 'should show:', isDark ? 'DarkLogo' : 'LightLogo')
+
+  useEffect(() => {
+    // Check initial theme on mount
+    const checkTheme = () => {
+      const themeAttribute = document.documentElement.getAttribute('data-theme')
+      const isDarkMode = themeAttribute === 'dark'
+      console.log('Theme check:', { themeAttribute, isDarkMode, previousIsDark: isDark })
+      setIsDark(isDarkMode)
+    }
+
+    // Check theme immediately
+    checkTheme()
+
+    // Listen for theme changes via MutationObserver
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
+          console.log('Theme changed detected')
+          checkTheme()
+        }
+      })
+    })
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['data-theme']
+    })
+
+    return () => {
+      observer.disconnect()
+    }
+  }, [])
 
   const copyEmail = async () => {
     try {
@@ -26,21 +63,27 @@ export default function Header() {
       }}
     >
       <div className="flex items-center justify-between">
-        <h1 className="font-rubik text-2xl">
-          <Link href='/'>
-            MATTER
-          </Link>
-        </h1>
+        <Link href='/' className="flex items-center">
+          <Image
+            src={isDark ? '/DarkLogo.png' : '/LightLogo.png'}
+            alt={`Matter Logo (${isDark ? 'Dark' : 'Light'} Theme)`}
+            width={240}
+            height={80}
+            className="h-20 w-auto transition-opacity duration-300"
+            priority
+            onLoad={() => console.log(`Logo loaded: ${isDark ? 'DarkLogo' : 'LightLogo'} for ${isDark ? 'dark' : 'light'} theme`)}
+          />
+        </Link>
         <nav className="flex items-center space-x-8">
           <Link 
             href="/projects" 
-            className="font-pathway text-lg hover:opacity-70 transition-opacity"
+            className="font-pathway text-xl hover:opacity-70 transition-opacity"
           >
             PROJECTS
           </Link>
           <button 
             onClick={copyEmail}
-            className="font-pathway text-lg hover:opacity-70 transition-opacity relative"
+            className="font-pathway text-xl hover:opacity-70 transition-opacity relative"
           >
             {copied ? 'COPIED!' : 'CONTACT'}
           </button>
