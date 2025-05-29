@@ -73,10 +73,7 @@ export default function MacWindow({
             <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 theme-traffic-light-3 rounded-full"></div>
           </div>
           
-          {/* Window title */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-xs sm:text-sm font-medium theme-title-text truncate px-8 sm:px-12">{title}</span>
-          </div>
+          
         </div>
 
         {/* Content area */}

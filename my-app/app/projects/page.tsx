@@ -3,59 +3,80 @@ import MacWindow from '../components/MacWindow'
 export default function ProjectsPage() {
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "Pants Index",
       date: "December 2024",
-      status: "active" as const,
-      description: "A modern e-commerce platform built with Next.js, featuring real-time inventory management, advanced search capabilities, and seamless payment integration. Currently implementing the checkout flow and user dashboard.",
+      status: "completed" as const,
+      description: "An improved online pants marketplace focused on measurements first. Sort pants by a range of measurements.",
       size: "large" as const
     },
     {
-      title: "Task Management App",
-      date: "November 2024", 
+      title: "Stock Trading Automation",
+      date: "January 2024", 
       status: "completed" as const,
-      description: "Clean and intuitive task management application with drag-and-drop functionality, team collaboration features, and deadline tracking.",
-      size: "medium" as const
+      description: "An automated trading bot that takes in government official's trades and copies them.",
+      size: "large" as const
     },
     {
-      title: "Portfolio Website",
-      date: "October 2024",
-      status: "completed" as const,
-      description: "Personal portfolio showcasing projects and skills with a vintage aesthetic and smooth animations.",
-      size: "small" as const
-    },
-    {
-      title: "AI Content Generator",
-      date: "January 2025",
+      title: "Restaurant Payment",
+      date: "Not Started", 
       status: "planning" as const,
-      description: "Intelligent content generation tool that helps writers and marketers create engaging copy using advanced AI models and natural language processing.",
-      size: "large" as const
-    },
-    {
-      title: "Weather Dashboard",
-      date: "September 2024",
-      status: "completed" as const,
-      description: "Real-time weather monitoring dashboard with location-based forecasts and historical data visualization.",
+      description: "Simplify the restaurant experience at your own pace; view the menu, order, and pay all at the touch of an NFC tag.",
       size: "medium" as const
     },
     {
-      title: "Crypto Tracker",
-      date: "March 2025",
-      status: "on-hold" as const,
-      description: "Cryptocurrency portfolio tracker with real-time price updates, profit/loss calculations, and market trend analysis.",
-      size: "small" as const
+      title: "Noted",
+      date: "Not Started",
+      status: "planning" as const,
+      description: "Record experiences of every variety. Get custom recommendations, tailor made for your taste from people you trust",
+      size: "medium" as const
     },
     {
-      title: "Social Media Analytics",
-      date: "February 2025",
-      status: "active" as const,
-      description: "Comprehensive analytics platform for social media managers to track engagement, growth metrics, and audience insights across multiple platforms.",
-      size: "large" as const
+      title: "Bounty Hunter",
+      date: "Not Started",
+      status: "planning" as const,
+      description: "Simplify the shopping experience by hiring freelance personal shoppers looking to make a quick buck.",
+      size: "medium" as const
     },
     {
-      title: "Recipe Finder",
-      date: "August 2024",
-      status: "completed" as const,
-      description: "Smart recipe discovery app that suggests meals based on available ingredients and dietary preferences.",
+      title: "Skilld",
+      date: "Not Started",
+      status: "planning" as const,
+      description: "An automated ingestion and organizational tool for instruction-style social media videos. Think of a recipe book for skills.",
+      size: "medium" as const
+    },
+    {
+      title: "MidTradesAI",
+      date: "Not Started",
+      status: "planning" as const,
+      description: "AI Trading Insights based on your invesment preferences and situation.",
+      size: "medium" as const
+    },
+    {
+      title: "IDE Lessons",
+      date: "Not Started",
+      status: "planning" as const,
+      description: "Capture the concepts you're using Ai for and generate lesson plans to help you better learn and grow in that breadth.",
+      size: "medium" as const
+    },
+    {
+      title: "Sentiment Aggregator",
+      date: "Not Started",
+      status: "planning" as const,
+      description: "Instantly understand public sentiment of any product using an AI-based web scraper accessing public opinions across platforms.",
+      size: "medium" as const
+    },
+    {
+      title: "AI Game Commentator",
+      date: "Not Started",
+      status: "planning" as const,
+      description: "Add some flair to your home games with your choice of Voice Commentators using computer vision to enhance gameplay.",
+      size: "medium" as const
+    },
+    {
+      title: "Workd",
+      date: "Not Started",
+      status: "planning" as const,
+      description: "An automated ingestion and organizational tool for workout style social media content.",
       size: "medium" as const
     }
   ]
@@ -64,7 +85,6 @@ export default function ProjectsPage() {
     <main className="content-area min-h-screen pt-16 sm:pt-20 lg:pt-20 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8 sm:mb-12">
-          <h1 className="font-pathway text-right text-2xl sm:text-3xl lg:text-4xl mb-2 sm:mb-4">Projects</h1>
           <p className="font-pathway text-right text-base sm:text-lg lg:text-xl text-gray-600">A collection of work and experiments</p>
         </div>
 
