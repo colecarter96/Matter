@@ -16,7 +16,7 @@ export default function Header() {
     const checkTheme = () => {
       const themeAttribute = document.documentElement.getAttribute('data-theme')
       const isDarkMode = themeAttribute === 'dark'
-      console.log('Theme check:', { themeAttribute, isDarkMode, previousIsDark: isDark })
+      console.log('Theme check:', { themeAttribute, isDarkMode })
       setIsDark(isDarkMode)
     }
 
