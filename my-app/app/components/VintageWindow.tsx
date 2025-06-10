@@ -33,13 +33,37 @@ export default function VintageWindow({ children }: VintageWindowProps) {
         }}
       />
 
+      {/* Recessed MATTER Text Background */}
+      <div 
+          className="absolute bottom-2 sm:bottom-3 md:bottom-4 lg:bottom-4 xl:bottom-5  left-4 sm:left-8 md:left-14 lg:left-28 xl:left-32 right-4 sm:right-8 md:right-14 lg:right-28 xl:right-32 flex items-center justify-center pointer-events-none"
+          style={{ zIndex: 100 }}
+        >
+          <div 
+            className="font-pathway text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal tracking-wider select-none"
+            style={{
+              color: 'rgba(0, 0, 0, 0.5)',
+              textShadow: `
+                2px 2px 4px rgba(255, 255, 255, 0.8),
+                3px 3px 6px rgba(0, 0, 0, 0.4),
+                -1px -1px 2px rgba(255, 255, 255, 0.6),
+                0px 0px 8px rgba(0, 0, 0, 0.3)
+              `
+            }}
+          >
+            MATTER
+          </div>
+        </div>
+
       {/* Container for both scrollable content and fixed shadow */}
       <div className="h-full rounded-lg relative">
+        
+        
         {/* Scrollable Content */}
         <div 
           className="h-full overflow-y-auto overflow-x-hidden relative rounded-lg"
           style={{
-            backgroundColor: 'var(--background)'
+            backgroundColor: 'var(--background)',
+            zIndex: 2
           }}
         >
           {children}

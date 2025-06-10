@@ -1,5 +1,5 @@
-import VintageTerminal from './components/VintageTerminal'
-import ClientOnly from './components/ClientOnly'
+// import VintageTerminal from './components/VintageTerminal'
+// import ClientOnly from './components/ClientOnly'
 import PixelAnimation from './components/PixelAnimation'
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
     </div>
 
     {/* Terminal with fixed height */}
-    <div className="pt-[28vh]">
+    {/* <div className="pt-[28vh]">
       <ClientOnly fallback={
         <div className="w-full h-full bg-[#2d2d2d] border-2 border-white rounded-lg font-mono text-white flex items-center justify-center">
           <span className="text-sm">Loading terminal...</span>
@@ -20,7 +20,7 @@ export default function Home() {
       }>
         <VintageTerminal />
       </ClientOnly>
-    </div>
+    </div> */}
   </main>
 </>
 

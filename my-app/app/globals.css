@@ -41,6 +41,34 @@
   --body-text: #d1d5db;
 }
 
+/* Smooth scrolling and scrollbar hiding */
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+html::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Hide scrollbar for all elements */
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
 /* Font family utility classes */
 .font-rubik {
   font-family: var(--font-rubik);
@@ -56,11 +84,6 @@
 
 .font-pathway {
   font-family: var(--font-pathway-gothic);
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
 }
 
 /* Theme-aware content area */
