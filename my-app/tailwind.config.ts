@@ -16,6 +16,7 @@ export default {
         rubik: ["var(--font-rubik)"],
         chivo: ["var(--font-chivo)"],
         pathway: ["var(--font-pathway-gothic)"],
+        comico: ["var(--font-comico)"],
       },
     },
   },
