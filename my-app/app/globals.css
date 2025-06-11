@@ -92,3 +92,17 @@ body {
   color: var(--foreground);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+@font-face {
+  font-family: 'Comico';
+  src: url('/fonts/comico/Comico-Regular.woff2') format('woff2'),
+       url('/fonts/comico/Comico-Regular.woff') format('woff'),
+       url('/fonts/comico/Comico-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-comico: 'Comico', sans-serif;
+}

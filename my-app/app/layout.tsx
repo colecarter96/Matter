@@ -1,10 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Rubik, Chivo, Pathway_Gothic_One, Roboto_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "./components/Header";
-import VintageWindow from "./components/VintageWindow";
-import ClientOnly from "./components/ClientOnly";
-import SettingsBar from "./components/SettingsBar";
+import ConditionalVintageWrapper from "./components/ConditionalVintageWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -67,22 +64,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${rubik.variable} ${chivo.variable} ${pathwayGothic.variable} ${robotoMono.variable} antialiased`}
         suppressHydrationWarning
       >
-        <VintageWindow>
-          <Header/>
+        <ConditionalVintageWrapper>
           {children}
-          <ClientOnly fallback={
-          <div className="sticky bottom-0 z-10 w-full py-3 px-8 border-t border-gray-200" style={{
-            backgroundColor: 'var(--background)',
-            color: 'var(--foreground)'
-          }}>
-            <div className="flex items-center justify-center">
-              <span className="font-pathway text-sm">Loading controls...</span>
-            </div>
-          </div>
-        }>
-          <SettingsBar />
-        </ClientOnly>
-        </VintageWindow>
+        </ConditionalVintageWrapper>
       </body>
     </html>
   );
