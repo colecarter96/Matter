@@ -2,6 +2,7 @@
 // import ClientOnly from './components/ClientOnly'
 // import PixelAnimation from './components/PixelAnimation'
 import Link from 'next/link';
+import HeadlineCrumble from './components/HeadlineCrumble';
 
 export default function Home() {
   return (
@@ -19,9 +20,24 @@ export default function Home() {
             <p className="inline-block px-6 py-2 border-2 border-black rounded-full">Matter</p>
           </div>
           <div className="w-2/3 ml-2 md:ml-5">
-            <p className="">A place for things</p>
-            <p className="">An attempt at</p>
-            <p className="">Connecting all the dots</p>
+            <p className="">
+              <HeadlineCrumble 
+                text="A place for things" 
+                className="text-xl md:text-3xl xl:text-4xl font-comico text-black"
+              />
+            </p>
+            <p className="">
+              <HeadlineCrumble 
+                text="An attempt at" 
+                className="text-xl md:text-3xl xl:text-4xl font-comico text-black"
+              />
+            </p>
+            <p className="">
+              <HeadlineCrumble 
+                text="Connecting all the dots" 
+                className="text-xl md:text-3xl xl:text-4xl font-comico text-black"
+              />
+            </p>
           </div>
           
         </div>
