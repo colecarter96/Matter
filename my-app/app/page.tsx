@@ -69,8 +69,9 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="absolute bottom-0 right-0 transform rotate-90 mb-14 mr-0">
-          <h1 className="font-clash-bold text-md md:text-xl">MATTER</h1>
+        <div className="fixed bottom-32 right-[-90px] transform rotate-90">
+          <h1 className="font-rx100 text-md md:text-xl whitespace-pre">32°52'36.8"N 
+                                                        117°14'35.7"W</h1>
         </div>
       </div>
 

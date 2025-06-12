@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react'
 
 export default function SettingsBar() {
-  const [isDarkMode, setIsDarkMode] = useState(false)
   const [currentTime, setCurrentTime] = useState('')
   const [deviceInfo, setDeviceInfo] = useState('')
 

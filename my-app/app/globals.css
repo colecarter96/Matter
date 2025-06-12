@@ -109,7 +109,17 @@ a, button, input, textarea, select, [role="button"] {
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'RX100';
+  src: url('/fonts/RX100/RX100-Regular.woff2') format('woff2'),
+       url('/fonts/RX100/RX100-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --font-comico: 'Comico', sans-serif;
   --font-clash: 'Clash Display', sans-serif;
+  --font-rx100: 'RX100', sans-serif;
 }
