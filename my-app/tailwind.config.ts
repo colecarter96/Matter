@@ -17,6 +17,8 @@ export default {
         chivo: ["var(--font-chivo)"],
         pathway: ["var(--font-pathway-gothic)"],
         comico: ["var(--font-comico)"],
+        clash: ["var(--font-clash)"],
+        rx100: ["var(--font-rx100)"],
       },
     },
   },

@@ -3,17 +3,12 @@
 import { useState, useEffect } from 'react'
 
 export default function SettingsBar() {
-  const [isDarkMode, setIsDarkMode] = useState(false)
   const [currentTime, setCurrentTime] = useState('')
   const [deviceInfo, setDeviceInfo] = useState('')
 
   useEffect(() => {
     // Initialize theme from localStorage or default to light
-    const savedTheme = localStorage.getItem('theme')
-    if (savedTheme === 'dark') {
-      setIsDarkMode(true)
-      document.documentElement.setAttribute('data-theme', 'dark')
-    }
+    
 
     // Get device info
     const getDeviceInfo = () => {
@@ -47,16 +42,6 @@ export default function SettingsBar() {
     return () => clearInterval(interval)
   }, [])
 
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode)
-    if (!isDarkMode) {
-      document.documentElement.setAttribute('data-theme', 'dark')
-      localStorage.setItem('theme', 'dark')
-    } else {
-      document.documentElement.removeAttribute('data-theme')
-      localStorage.setItem('theme', 'light')
-    }
-  }
 
   return (
     <div 
@@ -73,14 +58,6 @@ export default function SettingsBar() {
           <span className="font-pathway text-sm">{currentTime}</span>
           <span className="font-pathway text-sm text-gray-500">{deviceInfo}</span>
         </div>
-
-        {/* Right - Theme toggle */}
-        <button
-          onClick={toggleDarkMode}
-          className="font-pathway text-sm hover:opacity-70 transition-opacity"
-        >
-          {isDarkMode ? 'LIGHT' : 'DARK'}
-        </button>
       </div>
     </div>
   )

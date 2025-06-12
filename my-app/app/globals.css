@@ -21,25 +21,12 @@
   --body-text: #374151;
 }
 
-/* Dark mode variables */
-[data-theme="dark"] {
-  --background: #2e2e2e;
-  --foreground: #ededed;
-  
-  /* MacWindow dark theme variables */
-  --window-bg: #2e2e2e;
-  --window-border: #4b5563;
-  --title-bar-bg: #2b2b2b;
-  --title-bar-border: #4b5563;
-  --traffic-light-1: #d1d5db;
-  --traffic-light-2: #9ca3af;
-  --traffic-light-3: #6b7280;
-  --title-text: #d1d5db;
-  --content-text: #f9fafb;
-  --heading-text: #f9fafb;
-  --muted-text: #9ca3af;
-  --body-text: #d1d5db;
+*{
+  margin: 0;
+  padding: 0;
 }
+
+
 
 /* Smooth scrolling and scrollbar hiding */
 html {
@@ -57,6 +44,11 @@ body {
   background: var(--background);
   scroll-behavior: smooth;
   overflow-x: hidden;
+  cursor: none;
+}
+
+a, button, input, textarea, select, [role="button"] {
+  cursor: none !important;
 }
 
 /* Hide scrollbar for all elements */
@@ -86,6 +78,11 @@ body {
   font-family: var(--font-pathway-gothic);
 }
 
+.font-clash-bold{
+  font-family: var(--font-clash);
+  font-weight: 700;
+}
+
 /* Theme-aware content area */
 .content-area {
   background-color: var(--background);
@@ -103,6 +100,26 @@ body {
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Clash Display';
+  src: url('/fonts/clashDisplay/ClashDisplay-Variable.woff2') format('woff2'),
+       url('/fonts/clashDisplay/ClashDisplay-Variable.woff') format('woff');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RX100';
+  src: url('/fonts/RX100/RX100-Regular.woff2') format('woff2'),
+       url('/fonts/RX100/RX100-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --font-comico: 'Comico', sans-serif;
+  --font-clash: 'Clash Display', sans-serif;
+  --font-rx100: 'RX100', sans-serif;
 }

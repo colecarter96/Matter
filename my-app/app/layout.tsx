@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Rubik, Chivo, Pathway_Gothic_One, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import ConditionalVintageWrapper from "./components/ConditionalVintageWrapper";
+import CustomCursor from "./components/CustomCursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -64,6 +65,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${rubik.variable} ${chivo.variable} ${pathwayGothic.variable} ${robotoMono.variable} antialiased`}
         suppressHydrationWarning
       >
+        <CustomCursor />
         <ConditionalVintageWrapper>
           {children}
         </ConditionalVintageWrapper>
